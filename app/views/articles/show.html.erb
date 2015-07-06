@@ -1,0 +1,17 @@
+<h2>Article Name </h2>
+<%= @article.name %>
+<h2>Article Description </h2>
+<%= @article.description %>
+<h2>Article Reporter </h2>
+<%= @article.reporter %>
+<br/>
+
+<h1>Comments List</h1>
+<%= render @article.comments %>
+
+<h1>Add Comments</h1>
+<%= render "comments/form" %>
+
+
+
+<%= link_to "Articles", articles_path,:class=>"btn btn-default" %>

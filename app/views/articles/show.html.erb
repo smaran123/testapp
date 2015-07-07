@@ -5,7 +5,7 @@
 <h2>Article Reporter </h2>
 <%= @article.reporter %>
 <br/>
-
+      <td><%= video_tag @article.video_url ,:size => "320x240", :controls => true , :poster => "video.jpg" %></td>   
 <h1>Comments List</h1>
 <%= render @article.comments %>
 

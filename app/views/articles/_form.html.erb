@@ -1,5 +1,5 @@
 
-<%= form_for @article do |f| %>
+<%= form_for @article, html: { multipart: true }  do |f| %>
 <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -26,8 +26,9 @@
 <%= f.label :description %>
 <%= f.text_field :description %>
 </div>
+ <%= f.label :video %>
+    <%= f.file_field :video %>
 <%= f.submit%>
 <%end%>
-
 
 <%= link_to "Back", articles_path,:class=>"btn btn-info" %>

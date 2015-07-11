@@ -53,3 +53,5 @@ AddVideoToArticle(migration file)
        -------------------
 
        add image in assets/image folder
+---------------------------------------------------------
+ajax crud operations of categories-products

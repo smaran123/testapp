@@ -1,0 +1,15 @@
+<legend>Categories</legend>
+<table class= "table table stripped">
+<tr>
+<th>CategoryName</th>
+<th> </th>
+<% @categories.each do |category| %>
+<tr>
+<td> <%= category.name %></td>
+<td>
+ <%= link_to "Show",category_path(category), :class => "btn btn-primary" %>
+<%= link_to "Edit",edit_category_path(category), :class => "btn btn-info" %>
+<%= link_to "Destroy",category_path(category), :class => "btn btn-danger" %>
+</td>
+</tr>
+<%end%>

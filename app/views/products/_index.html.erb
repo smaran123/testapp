@@ -1,0 +1,16 @@
+
+<% @category.products.each do |product| %>
+
+ <div id="product-<%= product.id %>"> 
+ <%= product.name %>
+ <%= product.description %>
+ <%= product.price %>
+ <%= link_to "Show", category_product_path(product.category,product), :class => "btn btn-info", :remote => :true %>
+ <%= link_to "Edit", edit_category_product_path(product.category,product), :class => "btn btn-info", :remote => :true%>
+<%= link_to "Delete", category_product_path(product.category, product), :method => :delete, :data => {:confirm => "are you sure"}, :class => "btn btn-danger", :remote => :true%>
+
+</div>
+
+<%end%>
+
+

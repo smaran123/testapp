@@ -1,0 +1,18 @@
+<%= form_for([@category, @category.products.build], :remote => :true, :method => "POST") do |f| %>
+
+<div class="form-field">
+<%=f.label :name %>
+<%= f.text_field :name %> 
+</div>
+
+<div class="form-field">
+<%=f.label :description %>
+<%= f.text_area :description %> 
+</div>
+
+<div class="form-field">
+<%=f.label :price %>
+<%= f.number_field :price %> 
+</div>
+<%= f.submit%>
+<%end%>
